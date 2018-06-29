@@ -7,7 +7,7 @@ $config['db']['master']['host'] = '127.0.0.1';
 $config['db']['master']['username'] = 'root';
 $config['db']['master']['password'] = 'root';
 $config['db']['master']['port'] = '3306';
-$config['db']['master']['database'] = 'we7';
+$config['db']['master']['database'] = 'yuanchuangs';
 $config['db']['master']['charset'] = 'utf8';
 $config['db']['master']['pconnect'] = 0;
 $config['db']['master']['tablepre'] = 'ims_';
@@ -26,7 +26,7 @@ $config['db']['slave']['1']['weight'] = 0;
 $config['db']['common']['slave_except_table'] = array('core_sessions');
 
 // --------------------------  CONFIG COOKIE  --------------------------- //
-$config['cookie']['pre'] = '4bfa_';
+$config['cookie']['pre'] = '1b9c_';
 $config['cookie']['domain'] = '';
 $config['cookie']['path'] = '/';
 
@@ -36,10 +36,11 @@ $config['setting']['cache'] = 'mysql';
 $config['setting']['timezone'] = 'Asia/Shanghai';
 $config['setting']['memory_limit'] = '256M';
 $config['setting']['filemode'] = 0644;
-$config['setting']['authkey'] = '0d0212c4';
+$config['setting']['authkey'] = 'd2cfbf6b';
 $config['setting']['founder'] = '1';
 $config['setting']['development'] = 0;
 $config['setting']['referrer'] = 0;
+$config['setting']['https'] = 0;
 
 // --------------------------  CONFIG UPLOAD  --------------------------- //
 $config['upload']['image']['extentions'] = array('gif', 'jpg', 'jpeg', 'png');
@@ -47,6 +48,13 @@ $config['upload']['image']['limit'] = 5000;
 $config['upload']['attachdir'] = 'attachment';
 $config['upload']['audio']['extentions'] = array('mp3');
 $config['upload']['audio']['limit'] = 5000;
+
+// --------------------------  CONFIG REDIS  --------------------------- //
+$config['setting']['redis']['server'] = '127.0.0.1';
+$config['setting']['redis']['port'] = 6379;
+$config['setting']['redis']['pconnect'] = 1;
+$config['setting']['redis']['timeout'] = 30;
+$config['setting']['redis']['session'] = 1;
 
 // --------------------------  CONFIG MEMCACHE  --------------------------- //
 $config['setting']['memcache']['server'] = '';
