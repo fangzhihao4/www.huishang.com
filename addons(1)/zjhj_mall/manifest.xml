@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://www.we7.cc" versionCode="">
+    <application setting="false">
+        <name><![CDATA[小程序商城]]></name>
+        <identifie><![CDATA[zjhj_mall]]></identifie>
+        <version><![CDATA[2.3.1.1]]></version>
+        <type><![CDATA[business]]></type>
+        <ability><![CDATA[小程序商城+三级分销]]></ability>
+        <description><![CDATA[小程序商城+三级分销]]></description>
+        <author><![CDATA[小程序商城]]></author>
+        <url><![CDATA[http://www.weixin.cn]]></url>
+    </application>
+    <platform>
+        <supports>
+            <item type="wxapp"/>
+        </supports>
+    </platform>
+    <bindings>
+    </bindings>
+    <permissions>
+    </permissions>
+    <install><![CDATA[weimao.php]]></install>
+    <uninstall><![CDATA[]]></uninstall>
+    <upgrade><![CDATA[]]></upgrade>
+</manifest>

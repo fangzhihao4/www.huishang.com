@@ -1,0 +1,22 @@
+1：修改siteinfo.js文件里面的域名和小程序ID
+
+var i = {
+  uniacid: "改成您自己的uniacid",
+  acid: "改成您自己的uniacid",
+  version: "1.0.0",
+  siteroot: "https://改成您的域名/app/index.php"
+};
+module.exports = i;
+
+
+unicaid和acid获取办法为：1）打开微擎后台-点击小程序菜单-选择对应的小程序
+                      2）点击右上角的管理按钮
+                      3）点击基础信息，拉到最下方有个消息推送配置
+                      4）URL里面的id=xx，这个数字就是小程序的id
+					  
+			unicaid和acid填一样的	  
+
+2：修改api.js文件里面的域名第一行
+
+var e = "https://改成你的域名/addons/zjhj_mall/core/web/index.php?store_id=1&r=api/",
+
