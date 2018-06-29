@@ -28,7 +28,6 @@ Page({
         }), app.request({
             url: api.cart.list,
             success: function(t) {
-              console.log(t.data)
                 0 == t.code && a.setData({
                     cart_list: t.data.list,
                     mch_list: t.data.mch_list,
