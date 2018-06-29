@@ -117,23 +117,6 @@ class CartListForm extends Model
             {
                 $rem_cat[] = $v->cat_id;
             }
-            $rem_list = GoodsCat::find()->where(['store_id'=>$this->store_id,'cat_id'=>$rem_cat,'is_delete'=>0])->limit(8)->select('goods_id')->asArray()->all();
-            foreach ($rem_list as $rem_key => $rem_val) {
-                $rem_goods= Goods::findOne([
-                'id' => $rem_val['goods_id'],
-                'is_delete' => 0,
-                'status' => 1,
-                ]);
-                $rem_lists = (object)[
-                    'goods_id' => $rem_goods->id,
-                    'goods_pic' => $rem_goods->cover_pic,
-                    'price' => $rem_goods->price,
-                    'goods_name' => $rem_goods->name,
-                    ];
-
-                $rem_arr_goods[] = $rem_lists;
-            }
-
             if ($goods->mch_id != 0) {
                 if (!is_array($mch_list['mch_id_' . $goods->mch_id]))
                     $mch_list['mch_id_' . $goods->mch_id] = [];
@@ -144,6 +127,24 @@ class CartListForm extends Model
             }
 
         }
+
+        $rem_list = GoodsCat::find()->where(['store_id'=>$this->store_id,'cat_id'=>$rem_cat,'is_delete'=>0])->limit(8)->select('goods_id')->asArray()->all();
+            foreach ($rem_list as $rem_key => $rem_val) {
+                $rem_goods= Goods::findOne([
+                'id' => $rem_val['goods_id'],
+                'is_delete' => 0,
+                'status' => 1,
+                ]);
+                if ($rem_goods->id) {
+                    $rem_lists = (object)[
+                        'goods_id' => $rem_goods->id,
+                        'goods_pic' => $rem_goods->cover_pic,
+                        'price' => $rem_goods->price,
+                        'goods_name' => $rem_goods->name,
+                        ];
+                }
+                $rem_arr_goods[] = $rem_lists;
+            }
         $new_mch_list = [];
         foreach ($mch_list as $i => $item) {
             $mch = Mch::findOne([
