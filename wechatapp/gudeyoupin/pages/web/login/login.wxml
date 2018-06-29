@@ -1,0 +1,6 @@
+<view style="padding: 150rpx 24rpx 0">
+    <view style="margin-bottom: 50rpx;text-align: center">即将登录网页端，是否允许登录？</view>
+    <view style="padding: 0 64rpx">
+        <button bindtap="loginSubmit" type="primary">允许登录</button>
+    </view>
+</view>
