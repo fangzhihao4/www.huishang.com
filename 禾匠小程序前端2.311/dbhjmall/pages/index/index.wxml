@@ -160,22 +160,25 @@
                         <image src="/images/icon-jiantou-r.png"></image>
                     </navigator>
                 </view>
-                <view class="goods-list flex-row goods-list-cols-{{cat_goods_cols}}">
-                    <view class="flex-grow-0" wx:for="{{cat.goods_list}}" wx:for-index="goods_index" wx:for-item="goods">
-                        <navigator class="goods-item" url="/pages/goods/goods?id={{goods.id}}">
-                            <image mode="aspectFill" src="{{goods.pic_url}}"></image>
-                            <text class="text-more-2 {{cat_goods_cols==3?'fs-sm':''}} {{cat_goods_cols==1?'aaa':''}}"  style="padding:0 20rpx;height:2.8em;line-height:1.4;">{{goods.name}}</text>
-                            <text class="goods-price" wx:if="{{cat_goods_cols==3}}">￥{{goods.price}}</text>
-                            
-                             <view class="flex-row{{cat_goods_cols==1?' aaa':''}}" style="padding:10rpx 20rpx" wx:if="{{cat_goods_cols!=3}}">
-                                <view class="flex-grow-1" style="color:#ff334b" wx:if="{{cat_goods_cols==1}}">{{goods.service}}</view>
-                                <view class="flex-grow-1" style="color:#ff334b">￥{{goods.price}}</view>
-                                <view class="fs-sm" style="color:#999;">已售{{goods.sales}}</view>
-                            </view>
-                            
-                        </navigator>
-                    </view>
-                </view>
+            <view class="goods-list flex-row goods-list-cols-{{cat_goods_cols}}">
+              <view class="flex-grow-0" wx:for="{{cat.goods_list}}" wx:for-index="goods_index" wx:for-item="goods">
+                <navigator class="goods-item" url="/pages/goods/goods?id={{goods.id}}">
+                  <image mode="aspectFill" src="{{goods.pic_url}}"></image>
+                  <text class="text-more-2 {{cat_goods_cols==3?'fs-sm':''}} {{cat_goods_cols==1?'aaa':''}}" style="padding:0 20rpx;height:2.8em;line-height:1.4;">{{goods.name}}</text>
+                  <text class="{{cat_goods_cols==1?'ccc':'zzz'}}" style="padding:0;">{{goods.service}}</text>
+                  <text class="goods-price" wx:if="{{cat_goods_cols==3}}">￥{{goods.price}}</text>
+                  <view class="flex-row {{cat_goods_cols==1?'aaa':''}}" style="padding:10rpx 20rpx" wx:if="{{cat_goods_cols==2}}">
+                    <view class="flex-grow-1" style="color:#ff334b">￥{{goods.price}}</view>
+                    <view class="fs-sm" style="color:#999;">已售{{goods.sales}}</view>
+                  </view>
+                  <view class="flex-row {{cat_goods_cols==1?'aaa':''}}" style="padding:10rpx 20rpx" wx:if="{{cat_goods_cols==1}}">
+                    <view class="flex-grow-1" style="color:#ff334b">￥{{goods.price}}</view>
+                    <view class="{{cat_goods_cols==1?'bbb':'zzz'}}"><image src='/images/1.png'></image></view>
+                    <view class="fs-sm" style="color:#999;">已售{{goods.sales}}</view>
+                  </view>
+                </navigator>
+              </view>
+            </view>
             </view>
         </view>
         <view wx:elif="{{item.name=='single_cat'}}">

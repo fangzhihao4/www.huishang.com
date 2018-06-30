@@ -1,3 +1,52 @@
+/*修改*/
+.goods-list.goods-list-cols-1 .flex-grow-0{
+    width: 100%;
+}
+
+.goods-list.goods-list-cols-1 .flex-grow-0 .goods-item image {
+    height: 210rpx;
+    width: 205rpx;
+    float: left;
+}
+
+.goods-list.goods-list-cols-1 .flex-grow-0 .aaa{
+    height: 1.4em !important;
+    line-height: 1.4;
+    width: 70%;
+    float: right;
+}
+
+.goods-list.goods-list-cols-1 .flex-grow {
+    align-items: center;
+    justify-content: center;
+}
+
+.goods-list.goods-list-cols-1 .flex-grow-0 .bbb{
+    display: block;
+    flex: 0.25;
+}
+
+.goods-list.goods-list-cols-1 .flex-grow-0 .bbb image{
+    width: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+}
+
+.zzz{
+    display: none;
+}
+
+.goods-list.goods-list-cols-1 .flex-grow-0 .ccc {
+    margin-bottom: 30rpx;
+    float: left;
+    margin-top: 10rpx;
+    color: #ff334b;
+    border: 1rpx solid #ff334b;
+    margin-left: 42rpx;
+    border-radius: 10rpx;
+    font-size: 26rpx;
+}
+/*完成*/
 .banner {
     height: 360rpx;
 }
